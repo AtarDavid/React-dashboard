@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../assets/img/logo.svg';
 import '../assets/scss/App.scss';
+import Footer from './Footer';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <Footer />
       </div>
     );
   }
