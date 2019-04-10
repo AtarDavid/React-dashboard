@@ -6,12 +6,14 @@ import Header from './Header';
 import Footer from './Footer';
 import LegalNotice from './LegalNotice';
 import PrivacyPolicy from './PrivacyPolicy';
+import Settings from './Settings';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <Header />
+        <Settings />
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
