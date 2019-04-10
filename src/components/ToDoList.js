@@ -18,18 +18,18 @@ export default class ToDoList extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         // eslint-disable-next-line
-        const newItem = {
-            id: Date.now(),
-            text: this.state.text
-        }
-        const newList = this.state.items.concat(newItem)
-        this.setState(
-            state => ({
+        if (this.state.text) {
+            const newItem = {
+                id: Date.now(),
+                text: this.state.text
+            }
+            const newList = this.state.items.concat(newItem)
+            this.setState({
                 items: newList,
                 text: ''
             })
-        )
-        localStorage.setItem('memos', JSON.stringify(newList))
+            localStorage.setItem('memos', JSON.stringify(newList))
+        }
     }
 
     render() {
