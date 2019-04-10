@@ -28,9 +28,9 @@ export default class Clock extends Component {
 
     render() {
         return (
-            <div>
-                <h1>{this.state.date.toLocaleTimeString('de-DE')}</h1>
-                <p>{this.state.date.toLocaleDateString('en-DE', this.state.format)}</p>
+            <div className="clock">
+                <p className="time">{this.state.date.toLocaleTimeString('de-DE')}</p>
+                <p className="date">{this.state.date.toLocaleDateString('en-DE', this.state.format)}</p>
             </div>
         );
     }
