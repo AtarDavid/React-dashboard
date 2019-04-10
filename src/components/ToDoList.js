@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ItemsList from './ItemsList';
+import { temp } from './TemporaryList'
 
 export default class ToDoList extends Component {
 
@@ -7,7 +8,7 @@ export default class ToDoList extends Component {
         super(props)
         this.state = {
             text: '',
-            items: JSON.parse(localStorage.getItem('memos')) || []
+            items: temp || JSON.parse(localStorage.getItem('todo')) || []
         }
     }
 
@@ -28,7 +29,7 @@ export default class ToDoList extends Component {
                 items: newList,
                 text: ''
             })
-            localStorage.setItem('memos', JSON.stringify(newList))
+            localStorage.setItem('todo', JSON.stringify(newList))
         }
     }
 
