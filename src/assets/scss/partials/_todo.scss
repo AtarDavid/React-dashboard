@@ -1,0 +1,29 @@
+.todo {
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            background-color: #eee;
+            margin: calc(#{$margin} / 2.5) 0;
+            padding: calc(#{$padding} / 3) $padding;
+            border-radius: $borderRadius
+        }
+    }
+
+    input {
+        border: 1px solid $secondaryColor;
+        border-radius: $borderRadius 0 0 $borderRadius;
+        padding: calc(#{$padding} / 3) $padding;
+        outline: 0
+    }
+
+    button {
+        border-top: 1px solid $secondaryColor;
+        border-right: 1px solid $secondaryColor;
+        border-bottom: 1px solid $secondaryColor;
+        border-radius: 0 $borderRadius $borderRadius 0;
+        padding: calc(#{$padding} / 3) $padding;
+        outline: 0
+    }
+}

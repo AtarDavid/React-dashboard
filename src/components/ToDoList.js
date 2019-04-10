@@ -35,7 +35,7 @@ export default class ToDoList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="todo">
                 <h3>To do</h3>
 
                 <ItemsList items={this.state.items} />
