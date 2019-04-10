@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import logo from '../assets/img/logo.svg';
 import '../assets/scss/App.scss';
+import Header from './Header';
 import Footer from './Footer';
 import LegalNotice from './LegalNotice';
 import PrivacyPolicy from './PrivacyPolicy';
@@ -10,6 +11,7 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <Header />
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
