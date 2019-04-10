@@ -10,9 +10,9 @@ export default class Footer extends Component {
           </p>
           <nav>
             <ul>
-              <li>Github</li>
-              <li>Legal Notice</li>
-              <li>Privacy Policy</li>
+              <li><a target="_blanc" href="https://github.com/AtarDavid/React-dashboard">Github</a></li>
+              <li><a href="./legalnotice">Legal Notice</a></li>
+              <li><a href="./privacypolicy">Privacy Policy</a></li>
             </ul>
           </nav>
         </footer>
