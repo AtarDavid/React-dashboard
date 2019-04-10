@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Clock from './Clock';
+import Weather from './Weather';
 
 export default class Header extends Component {
 
@@ -7,8 +8,10 @@ export default class Header extends Component {
     return (
       <header>
         <Clock />
-        {/* weather widget */}
-        <a className="settings-toggle-out" href="#settings"><span className="fas fa-cog">&nbsp;</span></a>
+        <Weather />
+        <div className="settings-icon">
+          <a className="settings-toggle" href="#settings"><span className="fas fa-cog">&nbsp;</span></a>
+        </div>
       </header>
     );
   }
