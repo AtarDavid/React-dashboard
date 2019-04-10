@@ -13,12 +13,13 @@ class App extends Component {
     return (
       <Router>
         <Header />
-        <Settings />
+          <Settings />
+        <main>
+          <Route exact path="/" component={ Home } />
+          <Route path="/legalnotice" component={ LegalNotice } />
+          <Route path="/privacypolicy" component={ PrivacyPolicy } />
+        </main>
         <Footer />
-        
-        <Route exact path="/" component={ Home } />
-        <Route path="/legalnotice" component={ LegalNotice } />
-        <Route path="/privacypolicy" component={ PrivacyPolicy } />
       </Router>
     );
   }
