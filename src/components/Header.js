@@ -8,7 +8,9 @@ export default class Header extends Component {
       <header>
         <Clock />
         {/* weather widget */}
-        <a className="settings-toggle-out" href="#settings"><span className="fas fa-cog">&nbsp;</span></a>
+        <div className="settings-icon">
+          <a className="settings-toggle" href="#settings"><span className="fas fa-cog">&nbsp;</span></a>
+        </div>
       </header>
     );
   }

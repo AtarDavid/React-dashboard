@@ -9,7 +9,7 @@ export default class Settings extends Component {
           <div id="settings" className="settings">
 
             <a href="#" className="settings-toggle-out">
-              <span className="fas fa-cog">{'\u00A0'}</span>
+              <span className="fas fa-times">{'\u00A0'}</span>
             </a>
 
             <h2>Settings</h2>
