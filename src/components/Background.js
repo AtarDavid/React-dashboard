@@ -7,7 +7,7 @@ export default class Background extends Component {
 
         this.state = {
             img: "#",
-            api: "https://source.unsplash.com/featured/?",
+            api: "https://source.unsplash.com/1000x1000/?",
             keyword: "nature"
         };
     }
