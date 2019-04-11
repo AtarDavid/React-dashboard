@@ -6,17 +6,19 @@ import Footer from './Footer';
 import LegalNotice from './LegalNotice';
 import PrivacyPolicy from './PrivacyPolicy';
 import Settings from './Settings';
+import Background from './Background'
 
 class App extends Component {
   render() {
     return (
       <Router>
+        <Background />
         <Header />
-          <Settings />
+        <Settings />
         <main>
-          <Route exact path="/" component={ Home } />
-          <Route path="/legalnotice" component={ LegalNotice } />
-          <Route path="/privacypolicy" component={ PrivacyPolicy } />
+          <Route exact path="/" component={Home} />
+          <Route path="/legalnotice" component={LegalNotice} />
+          <Route path="/privacypolicy" component={PrivacyPolicy} />
         </main>
         <Footer />
       </Router>
