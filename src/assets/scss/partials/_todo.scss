@@ -2,10 +2,11 @@
     ul {
         padding: 0;
         height: 135px;
-        overflow: scroll;
+        overflow-y: scroll;
 
         li {
             list-style-type: none;
+            position: relative;
             background-color: #eee;
             margin: calc(#{$margin} / 2.5) 0;
             padding: calc(#{$padding} / 3) $padding;
