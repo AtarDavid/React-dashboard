@@ -12,6 +12,10 @@ export default class ToDoList extends Component {
         }
     }
 
+    handleClick = (event) => {
+        this.setState({ items: this.state.items.filter(item => item.id != event.target.id) })
+    }
+
     handleChange = (event) => {
         this.setState({ text: event.target.value })
     }
@@ -38,7 +42,7 @@ export default class ToDoList extends Component {
             <div className="todo">
                 <h3>To do</h3>
 
-                <ItemsList items={this.state.items} />
+                <ItemsList items={this.state.items} handleClick={this.handleClick} />
 
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" id="listItem" onChange={this.handleChange} value={this.state.text}></input>
