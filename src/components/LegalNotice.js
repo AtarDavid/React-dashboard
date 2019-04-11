@@ -6,8 +6,8 @@ export default class LegalNotice extends Component {
       return (
         <article id="legalnotice">
           <h1>Impressum (Legal Notice)</h1> 
-          <p>Angaben gemäß § 5 TMG
-             Peter R. Stuhlmann<br />
+          <h2>Angaben gemäß § 5 TMG</h2>
+          <p>Peter R. Stuhlmann<br />
              Martha-Arendsee-Str. 10<br />
              12681 Berlin</p>
 
