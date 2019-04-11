@@ -6,12 +6,16 @@ main {
     box-sizing: border-box;
 
     h1 {
-        text-align: center
+        text-align: center;
     }
 
     article {
         width: 100%;
-        padding: $padding;
-        box-sizing: border-box
+    }
+
+    #legalnotice {
+        h1 {
+            text-align: left
+        }
     }
 }
