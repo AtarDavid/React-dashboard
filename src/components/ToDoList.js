@@ -13,7 +13,7 @@ export default class ToDoList extends Component {
     }
 
     handleClick = (event) => {
-        this.setState({ items: this.state.items.filter(item => item.id != event.target.id) })
+        this.setState({ items: this.state.items.filter(item => item.id !== event.target.id) })
     }
 
     handleChange = (event) => {
