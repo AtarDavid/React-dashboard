@@ -1,0 +1,80 @@
+.tabmenu {
+    display: flex;
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    width: 500px;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        flex: 0 0 33.33333%;
+        color: #f0f0f0;
+        font-size: 16px;
+        display: flex;
+        padding: calc(#{$padding} / 3) 0;
+        margin: $margin 0;
+        box-sizing: border-box;
+        align-items: center;
+        z-index: 2;
+        cursor: pointer;
+        border: none;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &::before {
+            content: "";
+            position: relative;
+            width: 40px;
+            height: 100%;
+            left: 0%;
+            top: 0%;
+            padding: calc(#{$padding} / 3) 0;
+            color: #f0f0f0;
+            transform-origin: left top;
+            transform: skew(-30deg, 0deg);
+            -webkit-transform: skew(-30deg, 0deg);
+            -moz-transform: skew(-30deg, 0deg);
+            -ms-transform: skew(-30deg, 0deg);
+            -o-transform: skew(-30deg, 0deg);
+        }
+
+
+
+        &[for="tab1"] {
+            background-color: #104e5a;
+        }
+
+        &[for="tab2"] {
+            background-color: #142136;
+        }
+
+        &[for="tab2"]::before {
+            background-color: #142136;
+        }
+
+        &[for="tab3"] {
+            background-color: #d51515;
+        }
+
+        &[for="tab3"]::before {
+            background-color: #d51515;
+        }
+    }
+
+    #content1,
+    #content2,
+    #content3 {
+        display: none
+    }
+
+    #tab1:checked ~ #content1,
+    #tab2:checked ~ #content2,
+    #tab3:checked ~ #content3 {
+        display: block;
+        width: 100%;
+    }
+}
