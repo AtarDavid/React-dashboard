@@ -6,12 +6,14 @@ import Footer from './Footer';
 import LegalNotice from './LegalNotice';
 import PrivacyPolicy from './PrivacyPolicy';
 import Settings from './Settings';
-import Background from './Background'
+import Background from './Background';
+import ReactMetaTags from './MetaTags';
 
 class App extends Component {
   render() {
     return (
       <Router>
+        <ReactMetaTags />
         <Background />
         <Header />
         <Settings />
