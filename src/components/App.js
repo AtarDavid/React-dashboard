@@ -23,13 +23,19 @@ class App extends Component {
     this.setState({ theme: event.target.value }); localStorage.setItem("theme", event.target.value)
   }
 
+  changeUsername = (event) => {
+    if (event.keyCode == 13) {
+      this.setState({ username: event.target.value }); localStorage.setItem("username", event.target.value)
+    }
+  }
+
   render() {
     return (
       <Router>
         <ReactMetaTags />
         <Background key={this.state.theme} value={this.state.theme} />
         <Header />
-        <Settings handleChange={this.handleChange} />
+        <Settings handleChange={this.handleChange} changeUsername={this.changeUsername} />
         <main>
           <Route exact path="/"
             render={(props) => <Home {...props} username={this.state.username} />}

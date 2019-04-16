@@ -14,7 +14,7 @@ export default class Settings extends Component {
 
           <h2>Settings</h2>
 
-          <div className="username-input"><span>User</span> <input id="usernameInput" type="text" placeholder="Enter your name" /></div>
+          <div className="username-input"><span>User</span> <input id="usernameInput" type="text" placeholder="Enter your name" onKeyDown={this.props.changeUsername} /></div>
 
           <ul className="background-categories">
             <li><label>{/* img */}<br /><input type="radio" name="background" value="landscape" onChange={this.props.handleChange} /></label></li>
