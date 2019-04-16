@@ -14,7 +14,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      theme: localStorage.getItem("theme") || "landscape"
+      theme: localStorage.getItem("theme") || "landscape",
+      username: localStorage.getItem("username") || "user"
     };
   }
 
@@ -30,7 +31,9 @@ class App extends Component {
         <Header />
         <Settings handleChange={this.handleChange} />
         <main>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/"
+            render={(props) => <Home {...props} username={this.state.username} />}
+          />
           <Route path="/legalnotice" component={LegalNotice} />
           <Route path="/privacypolicy" component={PrivacyPolicy} />
         </main>
