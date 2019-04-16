@@ -3,9 +3,6 @@ import Welcome from './Welcome';
 import TabMenu from './TabMenu'
 
 export default class Home extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     render() {
         return <React.Fragment>

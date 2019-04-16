@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   changeUsername = (event) => {
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
       this.setState({ username: event.target.value }); localStorage.setItem("username", event.target.value)
     }
   }
