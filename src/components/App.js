@@ -14,12 +14,19 @@ class App extends Component {
     super(props);
 
     this.state = {
-      theme: localStorage.getItem("theme") || "landscape"
+      theme: localStorage.getItem("theme") || "landscape",
+      username: localStorage.getItem("username") || "user"
     };
   }
 
   handleChange = (event) => {
     this.setState({ theme: event.target.value }); localStorage.setItem("theme", event.target.value)
+  }
+
+  changeUsername = (event) => {
+    if (event.keyCode === 13) {
+      this.setState({ username: event.target.value }); localStorage.setItem("username", event.target.value)
+    }
   }
 
   render() {
@@ -28,9 +35,11 @@ class App extends Component {
         <ReactMetaTags />
         <Background key={this.state.theme} value={this.state.theme} />
         <Header />
-        <Settings handleChange={this.handleChange} />
+        <Settings handleChange={this.handleChange} changeUsername={this.changeUsername} />
         <main>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/"
+            render={(props) => <Home {...props} username={this.state.username} />}
+          />
           <Route path="/legalnotice" component={LegalNotice} />
           <Route path="/privacypolicy" component={PrivacyPolicy} />
         </main>

@@ -58,7 +58,7 @@ export default class Welcome extends Component {
 
     render() {
         return (
-            <h1>{this.state.greeting} User</h1 >
+            <h1>{this.state.greeting} {this.props.username}</h1 >
         );
     }
 }
