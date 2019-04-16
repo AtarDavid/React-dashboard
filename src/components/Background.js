@@ -7,13 +7,12 @@ export default class Background extends Component {
 
         this.state = {
             img: "#",
-            api: "https://source.unsplash.com/1000x1000/?",
-            keyword: "nature"
+            api: "https://source.unsplash.com/1920x1080/?",
         };
     }
 
     componentDidMount() {
-        fetch(this.state.api + this.state.keyword)
+        fetch(this.state.api + this.props.value)
             .then(response => this.setState({ img: response.url }))
     }
 

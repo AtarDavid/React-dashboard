@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 
 export default class Settings extends Component {
 
-  handleChange = (event) => {
-    console.log("change theme")
-  }
-
   render() {
     return (
       <React.Fragment>
@@ -21,14 +17,14 @@ export default class Settings extends Component {
           <div className="username-input"><span>User</span> <input id="usernameInput" type="text" placeholder="Enter your name" /></div>
 
           <ul className="background-categories">
-            <li><label>{/* img */}<br /><input type="radio" name="background" value="landscape" onChange={this.handleChange} /></label></li>
-            <li><label>{/* img */}<br /><input type="radio" name="background" value="paris" onChange={this.handleChange} /></label></li>
-            <li><label>{/* img */}<br /><input type="radio" name="background" value="space" onChange={this.handleChange} /></label></li>
-            <li><label>{/* img */}<br /><input type="radio" name="background" value="cityscape" onChange={this.handleChange} /></label></li>
-            <li><label>{/* img */}<br /><input type="radio" name="background" value="wildlife" onChange={this.handleChange} /></label></li>
-            <li><label>{/* img */}<br /><input type="radio" name="background" value="ocean" onChange={this.handleChange} /></label></li>
-            <li><label>{/* img */}<br /><input type="radio" name="background" value="blackwhite" onChange={this.handleChange} /></label></li>
-            <li><label>{/* img */}<br /><input type="radio" name="background" value="architecture" onChange={this.handleChange} /></label></li>
+            <li><label>{/* img */}<br /><input type="radio" name="background" value="landscape" onChange={this.props.handleChange} /></label></li>
+            <li><label>{/* img */}<br /><input type="radio" name="background" value="paris" onChange={this.props.handleChange} /></label></li>
+            <li><label>{/* img */}<br /><input type="radio" name="background" value="space" onChange={this.props.handleChange} /></label></li>
+            <li><label>{/* img */}<br /><input type="radio" name="background" value="cityscape" onChange={this.props.handleChange} /></label></li>
+            <li><label>{/* img */}<br /><input type="radio" name="background" value="wildlife" onChange={this.props.handleChange} /></label></li>
+            <li><label>{/* img */}<br /><input type="radio" name="background" value="ocean" onChange={this.props.handleChange} /></label></li>
+            <li><label>{/* img */}<br /><input type="radio" name="background" value="blackwhite" onChange={this.props.handleChange} /></label></li>
+            <li><label>{/* img */}<br /><input type="radio" name="background" value="architecture" onChange={this.props.handleChange} /></label></li>
           </ul>
 
           <div className="zip-input"><span>ZIP</span><input id="zipCodeInput" type="number" placeholder="12345" /></div>
