@@ -1,7 +1,10 @@
 .settings-toggle {
     display: block;
     line-height: 1em;
-    color: $secondaryColor;
+    color: $primaryColor;
+    text-shadow: none;
+    opacity: 0.2;
+    transition: 0.2s;
     width: 100%;
     box-sizing: border-box;
     text-decoration: none;
@@ -9,7 +12,11 @@
     padding: $padding;
     text-align: right;
     margin-top: -13px;
-    margin-right: -19px
+    margin-right: -19px;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .settings-toggle-out {
@@ -37,6 +44,8 @@
     background-color: $primaryColor;
     padding: calc(#{$padding} * 2) $padding;
     box-sizing: border-box;
+    color: $secondaryColor;
+    text-shadow: none;
 
     &:target {
         right: 0;
