@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ItemsList from './ItemsList';
-import { temp } from './TemporaryList'
 
 export default class ToDoList extends Component {
 
@@ -8,12 +7,16 @@ export default class ToDoList extends Component {
         super(props)
         this.state = {
             text: '',
-            items: temp || JSON.parse(localStorage.getItem('todo')) || []
+            items: JSON.parse(localStorage.getItem('todo')) || []
         }
     }
 
     handleClick = (event) => {
-        this.setState({ items: this.state.items.filter(item => item.id != event.target.id) })
+        const newList = this.state.items.filter(item => item.id != event.target.id)
+        this.setState({
+            items: newList,
+        })
+        localStorage.setItem('todo', JSON.stringify(newList))
     }
 
     handleChange = (event) => {
