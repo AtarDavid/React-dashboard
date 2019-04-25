@@ -5,7 +5,7 @@ export default class Weather extends Component {
     super(props);
 
     this.state = {
-      icon: "logo"
+      icon: "01d"
     };
   }
   componentDidMount() {
@@ -27,7 +27,7 @@ export default class Weather extends Component {
   render() {
     return (
       <div className="weather">
-        <img className="icon" src={require(`../assets/img/${this.state.icon}.svg`)} />
+        <img className="icon" src={require(`../assets/img/weather/${this.state.icon}.svg`)} />
         <div className="temperature" />
       </div>
     );

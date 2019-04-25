@@ -45,23 +45,23 @@
 
 
         &[for="tab1"] {
-            background-color: #104e5a;
+            background-color: #000;
         }
 
         &[for="tab2"] {
-            background-color: #142136;
+            background-color: #484848;
         }
 
         &[for="tab2"]::before {
-            background-color: #142136;
+            background-color: #484848;
         }
 
         &[for="tab3"] {
-            background-color: #d51515;
+            background-color: #8a8a8a;
         }
 
         &[for="tab3"]::before {
-            background-color: #d51515;
+            background-color: #8a8a8a;
         }
     }
 

@@ -1,5 +1,5 @@
 footer {
-    color: $secondaryColor;
+    color: $primaryColor;
     font-size: 0.85em;
     width: 100%;
     margin: 0 auto;
@@ -30,7 +30,7 @@ footer {
 
     a {
         text-decoration: none;
-        color: $secondaryColor;
+        color: $primaryColor;
         transition: 0.3s ease all;
 
         &:hover {
