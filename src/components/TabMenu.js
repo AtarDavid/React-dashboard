@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ToDoList from './ToDoList'
+import NewsFeed from './NewsFeed';
 
 export default class TabMenu extends Component {
   
@@ -10,7 +11,7 @@ export default class TabMenu extends Component {
           <label for="tab1">To Do List</label>
 
           <input id="tab2" type="radio" name="tabs" />
-          <label for="tab2">Bla bla</label>
+          <label for="tab2">Newsfeed</label>
 
           <input id="tab3" type="radio" name="tabs" />
           <label for="tab3">Bla bla</label>
@@ -20,7 +21,7 @@ export default class TabMenu extends Component {
           </section>
 
           <section id="content2">
-            Bla bla bla
+            <NewsFeed />
           </section>
 
           <section id="content3">
