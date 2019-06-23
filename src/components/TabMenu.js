@@ -8,13 +8,13 @@ export default class TabMenu extends Component {
       return (
         <div className="tabmenu">
           <input id="tab1" type="radio" name="tabs" />
-          <label for="tab1">To Do List</label>
+          <label htmlFor="tab1">To Do List</label>
 
           <input id="tab2" type="radio" name="tabs" />
-          <label for="tab2">Newsfeed</label>
+          <label htmlFor="tab2">Newsfeed</label>
 
           <input id="tab3" type="radio" name="tabs" />
-          <label for="tab3">Bla bla</label>
+          <label htmlFor="tab3">Bla bla</label>
 
           <section id="content1">
             <ToDoList />
