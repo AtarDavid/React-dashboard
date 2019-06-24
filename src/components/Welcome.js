@@ -57,6 +57,11 @@ export default class Welcome extends Component {
     }
 
     render() {
+
+        if (this.props.username == "user") {
+            return <h1>{this.state.greeting}!</h1>
+        }
+
         return (
             <h1>{this.state.greeting}, {this.props.username}!</h1 >
         );
